@@ -475,3 +475,64 @@ ul a {
         gap: 8px;
     }
 }
+
+.shop-section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    background-color: #e2e7e6;
+    padding: 15px 20px;
+    gap: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* For Chrome, Safari, and newer Edge */
+.shop-section::-webkit-scrollbar {
+    height: 8px;
+}
+
+.shop-section::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.shop-section::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.shop-section::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Adjust the box sizing to be exactly 25% of container width (minus gaps) */
+.box {
+    min-width: calc(25% - 15px);
+    height: 400px;
+    flex-shrink: 0;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Media query adjustment for smaller screens */
+@media screen and (max-width: 1024px) {
+    .box {
+        min-width: calc(33.33% - 15px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box {
+        min-width: calc(50% - 15px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        min-width: calc(80% - 15px);
+    }
+}
